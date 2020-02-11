@@ -7,18 +7,12 @@ class Links extends Component {
                 <strong>Social Links</strong>
 
                 <ul>
-                    <li>
-                        <a href="https://fb.com">Facebook</a>
-                    </li>
-                    <li>
-                        <a href="https://fb.com">Twitter</a>
-                    </li>
-                    <li>
-                        <a href="https://fb.com">Linkedin</a>
-                    </li>
-                    <li>
-                        <a href="https://fb.com">Youtube</a>
-                    </li>
+                    {this.props.links.map((link, key) => (
+                        <li key={key}>
+                            <a href={link.link}>{link.name}</a>
+                        </li>
+                    ))}
+                    
                 </ul>
             </>
         );

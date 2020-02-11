@@ -6,11 +6,9 @@ class Skills extends Component {
             <>
                 <strong>Skills</strong>
                 <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>React</li>
-                    <li>NodeJS</li>
+                    {this.props.skills.map((skill, key) => (
+                        <li key={key}>{skill}</li>
+                    ))}
                 </ul>
             </>
         );

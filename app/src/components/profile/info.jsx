@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 
 class Info extends Component {
     render() {
+        console.log(this.props);
+        
         return (
             <>
-                <h3>Name : Saiful Islam</h3>
-                <p>Bio: I am JavaScript Developer</p>
+                <h3>Name : {this.props.name}</h3>
+                <p>Bio: {this.props.bio} </p>
             </>
         );
     }
