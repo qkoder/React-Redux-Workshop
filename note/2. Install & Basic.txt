@@ -1,0 +1,29 @@
+
+ React er file mane, react ke prothome react ke import korbo.
+
+
+
+
+je kono component design kora purbe prothom chinta jeita rakhte hobe,
+
+1. Future a kon data gulor update beshi asbe?
+2. UI te jeno touch kora na lage
+3. Data Source a touch korbo
+4. Group of related data, component choto howata important na, group howata important
+5. Component reuse hocche kina
+6. Code duplication jeno na hoy
+
+
+
+Class component er vitor variable thakle oitake this.variableName diye data pass korte hoy.
+
+React er mote attribute ke bola hoy props,
+props = properties
+
+
+Data shob somoy thakbe parent component a
+
+parent component theke child component a data jaowar way hocche props
+
+html er vitor attributes jevabe likhe, props ta o sei vabe likhe
+
