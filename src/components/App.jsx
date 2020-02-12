@@ -8,7 +8,9 @@ class App extends Component {
                 <div className="container mt-5">
                     <div className="row justify-content-center">
                         <div className="col-xl-8">
-                            <Profile />
+                            <Profile id={1} />
+                            <Profile id={2} />
+                            <Profile id={3} />
                         </div>
                     </div>
                 </div>

@@ -1,26 +1,40 @@
 import React, { Component } from 'react';
+import { fetchData } from './../../profile-data';
 
 import Info from './info';
 import Links from './links';
 import Skills from './skills';
 
 class Profile extends Component {
-    name = 'Saiful Islam';
-    bio = 'I am JavaScript Developer';
-    skills = ['HTML', 'CSS', 'JavaScript', 'ReactJS', 'NodeJS', 'Nextjs'];
-    links = [
-        { link: 'https://youtube.com', name: 'Youtube' },
-        { link: 'https://fb.com', name: 'Facebook' },
-        { link: 'https://twitter.com', name: 'Twitter' },
-        { link: 'https://linkedin.com', name: 'Linkedin' },
-        { link: 'https://github.com', name: 'Github' },
-    ]
+
+    constructor(props) {
+        super(props)
+        const profile = fetchData(props.id)
+        this.state = {
+            id: profile.id || '',
+            name: profile.name ||  '',
+            bio: profile.bio ||  '',
+            skills: profile.skills ||  [],
+            links: profile.links ||  []
+        }
+
+
+    }
+
+
+
+
+
     render() {
+
+        const { name, bio, skills, links } = this.state
         return (
             <>
-                <Info name={this.name} bio={this.bio} />
-                <Skills skills={this.skills} />
-                <Links links={this.links} />
+                <Info name={name} bio={bio} />
+                <Skills skills={skills} />
+                <Links links={links} />
+
+
 
             </>
         );

@@ -25,5 +25,10 @@ Data shob somoy thakbe parent component a
 
 parent component theke child component a data jaowar way hocche props
 
-html er vitor attributes jevabe likhe, props ta o sei vabe likhe
+html er vitor attributes jevabe likhe, props ta o sei vabe likhe.
 
+
+
+State :  State hocche component er nijossho data.
+
+React a shob somoy immuteable way te kaj korte hoy.
