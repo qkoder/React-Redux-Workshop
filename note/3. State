@@ -1,0 +1,32 @@
+ React a Component jotota na beshi important, tar cheye beshi important State.
+
+
+
+
+
+ pubsub : publish subscribe pattern
+
+ state ekta observer variable, ei variable er sathe kichu listener, event jukto kora ase.
+
+ kono vabe state poriborton hole, jara er subscriber ase tara update pabe. 
+ kono na kono component ase je component gulo ei state ta ke change korbe.
+
+
+ State hocche component er actual data, state ta hocche data store.
+
+ Ei state ke poriborton korar jonno bivinno function/method create korte hoy. 
+ Ei function gulo hocche amader publisher.
+ Ei state er vitor jsx er code gulo hocche subscriber.
+
+
+ Constructor er vitor state neya jay.
+
+ React er vitor je state ache oita kintu javascript er object.
+ variable o bolechi, karon state abar class er property. obserable property, jeita change hole notification pabo.
+
+
+ Developer er chita ta ke puro data upor niye jete hobe. 
+ UI kemon hobe, data structure kemon hobe.
+
+
+ 1:04:38 
