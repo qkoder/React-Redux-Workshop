@@ -30,3 +30,20 @@
 
 
  1:04:38 
+
+
+ primitive data hocche muteable.
+
+ javascript er vasay je kono array/object muteable data.
+
+
+ component toiri korar somoy 2 ta jinish mathay rakhte hobe.
+ 1. Konta dummy component hobe
+ 2. konta smart component hobe
+
+
+
+ javascript a funtion hocche first class value.
+
+ variable ke props akare jevabe pass kore,
+ function/value ke sei vabe pass kore.
