@@ -34,7 +34,8 @@ class AddClass extends Component {
                 <button onClick={this.toggleBox}> Show Box</button>
 
                 <h4 className={`text-${isBoxVisible ? "primary" : 'danger'}`}> This is Box title</h4>
-                <h3 className={`btn btn-${isBoxVisible ? "danger" : ''}`}> This is Box title</h3>
+
+                <button className={`btn btn-${isBoxVisible ? "danger" : 'primary'}`}> This is Box title</button>
 
             </div>
         );
