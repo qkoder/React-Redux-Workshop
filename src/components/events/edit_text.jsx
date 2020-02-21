@@ -57,7 +57,8 @@ class EditText extends Component {
                                 <strong>{this.state.name}</strong>
                             </p>
                         )
-                }
+                },
+                
             </>
         );
     }
