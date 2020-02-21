@@ -1,0 +1,7 @@
+
+1. Findout field
+2. Create State
+3. HandleChange
+4. HandleSubmit
+5. Error Handle
+6. Server Request

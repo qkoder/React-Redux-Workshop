@@ -1,6 +1,14 @@
 import React from 'react';
 
-function Form({ values = {}, changeHandaler,resetHandaler, submitHandaler }) {
+function Form({
+    values,
+    errors,
+    changeHandaler,
+    resetHandaler,
+    submitHandaler,
+    focusHandaler,
+    blurHandaler
+}) {
     return (
         <>
 
@@ -12,11 +20,15 @@ function Form({ values = {}, changeHandaler,resetHandaler, submitHandaler }) {
                         type="text"
                         placeholder="Enter Name"
                         id="name"
-                        className="form-control"
+                        className={errors.name ? 'form-control is-invalid' : 'form-control'}
                         name="name"
                         value={values.name}
                         onChange={changeHandaler}
+                        onFocus={focusHandaler}
+                        onBlur={blurHandaler}
                     />
+
+                    {errors.name && (<div className="invalid-feedback">{errors.name}</div>)}
                 </div>
 
                 <div className="form-group">
@@ -25,11 +37,15 @@ function Form({ values = {}, changeHandaler,resetHandaler, submitHandaler }) {
                         type="text"
                         placeholder="Enter Email"
                         id="email"
-                        className="form-control"
+                        className={errors.email ? 'form-control is-invalid' : 'form-control'}
                         name="email"
                         value={values.email}
                         onChange={changeHandaler}
+                        onFocus={focusHandaler}
+                        onBlur={blurHandaler}
                     />
+
+                    {errors.email && (<div className="invalid-feedback">{errors.email}</div>)}
                 </div>
 
                 <div className="form-group">
@@ -38,11 +54,15 @@ function Form({ values = {}, changeHandaler,resetHandaler, submitHandaler }) {
                         type="text"
                         placeholder="Enter Password"
                         id="pass"
-                        className="form-control"
+                        className={errors.pass ? 'form-control is-invalid' : 'form-control'}
                         name="pass"
                         value={values.pass}
                         onChange={changeHandaler}
+                        onFocus={focusHandaler}
+                        onBlur={blurHandaler}
                     />
+
+                    {errors.pass && (<div className="invalid-feedback">{errors.pass}</div>)}
                 </div>
 
                 <button className="btn btn-primary">Submit</button>
