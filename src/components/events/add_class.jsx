@@ -27,7 +27,7 @@ class AddClass extends Component {
         return (
             <div>
                 <button onClick={this.handleClick}>Button</button>
-                <p className={this.state.active ? 'text-primary active' : 'text-danger'}>This is text</p>
+                <p className={this.state.active ? 'text-primary' : 'text-danger'}>This is text</p>
 
                 <br/>
 
