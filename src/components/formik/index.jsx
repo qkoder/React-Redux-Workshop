@@ -1,5 +1,24 @@
 import React, { Component } from 'react';
-import { Formik, Form, Field } from 'formik';
+import { Formik, Form, Field, ErrorMessage  } from 'formik';
+import * as yup from 'yup';
+// import Forms from './form'
+
+const myValidationSchema = yup.object().shape({
+    name:
+        yup.string()
+            .required('Required')
+            .min(3, 'Too Short!')
+            .max(10, 'Too Long'),
+    email:
+        yup.string()
+            .required('Required')
+            .email('Invalid Email'),
+    password:
+        yup.string()
+            .required('Required')
+            .min(4, 'min 4 chars')
+
+});
 
 class FormikForm extends Component {
     render() {
@@ -16,27 +35,35 @@ class FormikForm extends Component {
                         (values, formikBag) => {
                             console.log(values);
                             console.log(formikBag);
+                            formikBag.resetForm();
 
                         }
                     }
+
+                    validationSchema={myValidationSchema}
+                    // validateOnBlur={true}
+                    // validateOnChange={false}
                 >
 
                     {props => {
-                        // console.log(props);
+                        console.log('Errors: ', props.errors);
 
                         return (
                             <Form>
+                                <ErrorMessage name="name"/>
                                 <Field
                                     name='name'
                                     placeholder='Enter Name'
                                     className="form-control"
                                 />
+                                <ErrorMessage name="email" />
                                 <Field
                                     type="email"
                                     name='email'
                                     placeholder='Enter Email'
                                     className="form-control"
                                 />
+                                <ErrorMessage name="password" />
                                 <Field
                                     type="password"
                                     name='password'
