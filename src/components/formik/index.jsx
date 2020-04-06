@@ -33,10 +33,7 @@ class FormikForm extends Component {
 
                     onSubmit={
                         (values, formikBag) => {
-                            console.log(values);
-                            console.log(formikBag);
                             formikBag.resetForm();
-
                         }
                     }
 
@@ -46,7 +43,7 @@ class FormikForm extends Component {
                 >
 
                     {props => {
-                        console.log('Errors: ', props.errors);
+                        // console.log('Errors: ', props.errors);
 
                         return (
                             <Form>
